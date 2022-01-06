@@ -1,0 +1,173 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary */
+
+:root {
+    --color__Soft-blue: hsl(215, 51%, 70%);
+    --color__Cyan: hsl(178, 100%, 50%);
+    
+    /* ### Neutral */
+    
+    --color__Very-dark-blue-main: hsl(217, 54%, 11%);  /*(main BG)*/
+    --color__Very-dark-blue-card : hsl(216, 50%, 16%); /*(card BG)*/
+    --color__Very-dark-blue-line :hsl(215, 32%, 27%); /* (line)*/
+    --color__White: hsl(0, 0%, 100%);
+    
+}
+/* ## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font */
+
+/* - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color__Soft-blue);
+    background-color: var(--color__Very-dark-blue-main);
+}
+
+.container {
+    width: 325px;
+    background-color: var(--color__Very-dark-blue-card);
+
+    padding: 1.333rem;
+    border-radius: 1rem;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    
+}
+
+.hero {
+    position: relative;
+    border-radius: 0.558rem;
+    overflow: hidden;
+}
+
+.hero:hover::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(178, 100%, 50%, 0.5);
+    background-image: url(images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.desk {
+    margin-top: 1.333rem;
+}
+
+.title {
+    
+    font-size: 1.667rem;
+    color: var(--color__White);
+    font-weight: 600;
+}
+
+.title:hover{
+    color: var(--color__Cyan);
+}
+
+
+.intro {
+    margin-top: 0.833rem;
+    line-height: 1.444em;
+}
+
+.value {
+    margin-top: 0.722rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.value div {
+    display: flex;
+    align-items: center;
+}
+
+.value__icon {
+    display: block;
+}
+
+.value__text {
+    margin-left: 0.5rem;
+}
+
+.value__eth {
+    color: var(--color__Cyan);
+    font-weight: 600;
+} 
+
+.profile {
+    margin-top: 0.722rem;
+    border-top: 2px solid var(--color__Very-dark-blue-line);
+    padding-top: 0.833rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 1.889rem;
+    border-radius: 50%;
+    border: 1px solid var(--color__White);
+}
+
+.profile p {
+    margin-left: 0.722rem;
+}
+
+.profile p span {
+    color: var(--color__White);
+}
+
+.profile p span:hover {
+    color: var(--color__Cyan);
+}
+
+@media (min-width:1440px){
+    .container {
+        width: 352px;
+    }
+}
+
+
